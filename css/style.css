@@ -178,14 +178,12 @@ nav ul li .bar-items:hover {
     text-align: start;
 }
 /* table page end */
-
 main .container .nav-links {
-    width: 100%;
-    display: flex;
     margin: 20px 0;
 }
 main .container .nav-links a {
     white-space: nowrap;
+    display: inline-block;
     color: #17202A;
     padding: 20px;
     border-radius: 15px;
@@ -196,17 +194,14 @@ main .container .nav-links .active {
 main .container .nav-links a:hover {
     background-color: #D7DBDD;
 }
-main .container .nav-links .filter {
-    width: 100%;
-}
-main .container .nav-links button {
+main .container-1  .nav-links button {
     outline: none;
     background: none;
     cursor: pointer;
-    float: right;
     border: 2px solid grey;
     border-radius: 10px;
     padding: 15px 20px;
+    margin: 0 0 0 17em;
     white-space: nowrap;
     font-size: 20px;
 }
@@ -312,19 +307,58 @@ footer .top .fa-arrow-up {
 
 @media screen and (max-width: 560px) {
     header {
-        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    header .search {
+        margin: 10px 100px;
+    }
+    header .search #searchbtn {
+        right: 0;
+    }
+    header .room {
+        flex-direction: column;
+        position: absolute;
+        width: 60%;
+        top: 7.5rem;
+        margin: auto;
+        z-index: 0;
+    }
+    header .room a {
+        padding: 15px;
+    }
+
+
+
+
+
+
+    main {
+        width: 100%;
     }
     .container-1 {
+        padding: 0 45px;
         justify-content: flex-end;
-        margin: 50px 0;
     }
-    .container-1 .nav-links {
+    .nav-links {
+        width: 40%;
+        padding: 5px;
         text-align: end;
-        flex-direction: column;
+    }
+    .container-1 .nav-links a {
+        display: inline-block;
+    }
+    .container-1 button {
+        display: none;
     }
     .container-2 .row {
         width: 90%;
         margin: auto;
+    }
+
+
+    nav .fa-list {
+        margin: 10px 0;
     }
 
 
@@ -344,6 +378,19 @@ footer .top .fa-arrow-up {
     }
     footer {
         margin: 20px 0;
+        width: 100%;
+    }
+    footer .social-links .fa {
+        display: block;
+        text-align: center;
+        padding: 5px;
+    }
+    footer .social-links h2 {
+        text-align: center;
+        float: none;
+    }
+    footer .top {
+        display: none;
     }
 
 }
